@@ -25,10 +25,10 @@ public class PageViewController: NSViewController {
     private weak var leftArrow: ArrowControl?
     private weak var rightArrow: ArrowControl?
     
-    private weak var bottomPageControllerConstraint: NSLayoutConstraint?
+    private var bottomPageControllerConstraint: NSLayoutConstraint?
     // we are using left/right instead of leading/trailing b/c of the arrows; in case of an r-l lang, the viewControllers array will be reversed, which is simpler than dealing w/ leading/trailing arrows, as NSPageController doesn't support r-l langs
-    private weak var leftPageControllerConstraint: NSLayoutConstraint?
-    private weak var rightPageControllerConstraint: NSLayoutConstraint?
+    private var leftPageControllerConstraint: NSLayoutConstraint?
+    private var rightPageControllerConstraint: NSLayoutConstraint?
     
     private var trackingRectTag: NSView.TrackingRectTag?
     private var mouseInside = false
