@@ -15,7 +15,7 @@
 		138929351F70075300DE6DFB /* FLOPageViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 138929331F70075300DE6DFB /* FLOPageViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		138929381F70075300DE6DFB /* FLOPageViewController.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 138929311F70075200DE6DFB /* FLOPageViewController.framework */; };
 		138929391F70075300DE6DFB /* FLOPageViewController.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 138929311F70075200DE6DFB /* FLOPageViewController.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		1389293E1F70078000DE6DFB /* PageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13773ED81C4E9522003FF521 /* PageViewController.swift */; };
+		1389293E1F70078000DE6DFB /* FLOPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13773ED81C4E9522003FF521 /* FLOPageViewController.swift */; };
 		1389293F1F70078000DE6DFB /* PageControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13D69B101C50F8FD00CE3E6E /* PageControl.swift */; };
 		138929401F70078000DE6DFB /* ArrowControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13D69B121C51100A00CE3E6E /* ArrowControl.swift */; };
 		1396A9F61C4FD1E200D89DF1 /* ColoredView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1396A9F51C4FD1E200D89DF1 /* ColoredView.swift */; };
@@ -60,7 +60,7 @@
 		13773EC91C4E936A003FF521 /* FLOPageViewControllerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FLOPageViewControllerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		13773ECD1C4E936A003FF521 /* FLOPageViewControllerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FLOPageViewControllerUITests.swift; sourceTree = "<group>"; };
 		13773ECF1C4E936A003FF521 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		13773ED81C4E9522003FF521 /* PageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageViewController.swift; sourceTree = "<group>"; };
+		13773ED81C4E9522003FF521 /* FLOPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FLOPageViewController.swift; sourceTree = "<group>"; };
 		13773EDD1C4E9E59003FF521 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ViewController.swift; path = "../Sample App/ViewController.swift"; sourceTree = "<group>"; };
 		138929311F70075200DE6DFB /* FLOPageViewController.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FLOPageViewController.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		138929331F70075300DE6DFB /* FLOPageViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FLOPageViewController.h; sourceTree = "<group>"; };
@@ -143,7 +143,7 @@
 			isa = PBXGroup;
 			children = (
 				138929331F70075300DE6DFB /* FLOPageViewController.h */,
-				13773ED81C4E9522003FF521 /* PageViewController.swift */,
+				13773ED81C4E9522003FF521 /* FLOPageViewController.swift */,
 				13D69B101C50F8FD00CE3E6E /* PageControl.swift */,
 				13D69B121C51100A00CE3E6E /* ArrowControl.swift */,
 				138929341F70075300DE6DFB /* Info.plist */,
@@ -316,7 +316,7 @@
 			files = (
 				1389293F1F70078000DE6DFB /* PageControl.swift in Sources */,
 				138929401F70078000DE6DFB /* ArrowControl.swift in Sources */,
-				1389293E1F70078000DE6DFB /* PageViewController.swift in Sources */,
+				1389293E1F70078000DE6DFB /* FLOPageViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

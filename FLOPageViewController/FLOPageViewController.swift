@@ -11,14 +11,14 @@ import Cocoa
 private let ArrowSize = NSSize(width: 20, height: 40)
 
 @objc(FLOPageViewControllerDelegate)
-public protocol PageViewControllerDelegate: class {
-    func pageViewController(_ pageViewController: PageViewController, didSelectPage pageIndex: Int)
+public protocol FLOPageViewControllerDelegate: AnyObject {
+    func pageViewController(_ pageViewController: FLOPageViewController, didSelectPage pageIndex: Int)
 }
 
 @objc(FLOPageViewController)
-public class PageViewController: NSViewController {
+public class FLOPageViewController: NSViewController {
     
-    @objc public weak var delegate: PageViewControllerDelegate?
+    @objc public weak var delegate: FLOPageViewControllerDelegate?
     
     fileprivate weak var pageController: _FLOPageController!
     fileprivate weak var pageControl: PageControl?
@@ -60,7 +60,7 @@ public class PageViewController: NSViewController {
         pageController.delegate = self
         pageController.transitionStyle = .horizontalStrip
 
-        self.addChildViewController(pageController)
+        self.addChild(pageController)
         self.pageController = pageController
     }
     
@@ -106,7 +106,7 @@ public class PageViewController: NSViewController {
             if reverse {
                 self.viewControllers.reverseInPlace()
             }
-            self.pageController.arrangedObjects = self.viewControllers.map({ NSNumber(value: self.viewControllers.index(of: $0)!) })
+            self.pageController.arrangedObjects = self.viewControllers.map({ NSNumber(value: self.viewControllers.firstIndex(of: $0)!) })
             self.pageController.scrollingEnabled = (self.viewControllers.count > 1)
             
             if reverse {
@@ -428,7 +428,7 @@ public class PageViewController: NSViewController {
     
 }
 
-extension PageViewController: NSPageControllerDelegate {
+extension FLOPageViewController: NSPageControllerDelegate {
     
     public func pageController(_ pageController: NSPageController, identifierFor object: Any) -> NSPageController.ObjectIdentifier {
         guard let number = object as? NSNumber else { fatalError("The arrangedObjects array has been changed manually. This is not allowed! Please use the viewControllers array to manage the pages.") }
@@ -443,7 +443,7 @@ extension PageViewController: NSPageControllerDelegate {
     public func pageController(_ pageController: NSPageController, didTransitionTo object: Any) {
         let identifier = self.pageController(pageController, identifierFor: object)
         let viewController = self.pageController(pageController, viewControllerForIdentifier: identifier)
-        guard let index = self.viewControllers.index(of: viewController) else { return }
+        guard let index = self.viewControllers.firstIndex(of: viewController) else { return }
         
         self.pageControl?.selectedPage = UInt(index)
         self.hideArrowControls(false)
@@ -456,7 +456,7 @@ extension PageViewController: NSPageControllerDelegate {
     
 }
 
-extension PageViewController {
+extension FLOPageViewController {
     
     func debugQuickLookObject() -> AnyObject {
         return self.view
