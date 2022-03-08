@@ -69,6 +69,7 @@
 		13D69B101C50F8FD00CE3E6E /* PageControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageControl.swift; sourceTree = "<group>"; };
 		13D69B121C51100A00CE3E6E /* ArrowControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArrowControl.swift; sourceTree = "<group>"; };
 		13FB49731F9A086400C1AAFD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = "Sample App/Info.plist"; sourceTree = SOURCE_ROOT; };
+		EE1915FF27097E7D00635939 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
 		EEACBB1126B9118300E9433E /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = ko.lproj/Main.strings; sourceTree = "<group>"; };
 		EEACBB1526B9118700E9433E /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = ko.lproj/Main.strings; sourceTree = "<group>"; };
 		EEACBB1A26B9119000E9433E /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Main.strings; sourceTree = "<group>"; };
@@ -258,6 +259,7 @@
 				Base,
 				ko,
 				ja,
+				"zh-Hans",
 			);
 			mainGroup = 13773EAF1C4E936A003FF521;
 			productRefGroup = 13773EB91C4E936A003FF521 /* Products */;
@@ -350,6 +352,7 @@
 				EEACBB1526B9118700E9433E /* ko */,
 				EEACBB1A26B9119000E9433E /* ja */,
 				EEACBB1E26B9119200E9433E /* ja */,
+				EE1915FF27097E7D00635939 /* zh-Hans */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
